@@ -1,0 +1,28 @@
+# NotifyFlow Project Tasks
+
+- [/] Planning and Architecture
+    - [x] Define HLD and Data Flow
+    - [ ] Create Implementation Plan
+- [ ] Project Setup
+    - [ ] Initialize Node.js TypeScript project
+    - [ ] Configure Docker Compose for Postgres, Redis, RabbitMQ
+- [ ] Core Infrastructure
+    - [ ] Set up PostgreSQL schema (notifications, idempotency_keys)
+    - [ ] Implement Redis connection for caching and rate limiting
+    - [ ] Configure RabbitMQ (Exchanges, Queues, DLX/DLQ)
+- [ ] API Development
+    - [ ] Build API endpoints for notification requests
+    - [ ] Implement Idempotency Middleware
+    - [ ] Implement RabbitMQ Producer with Priority Support
+- [ ] Logic and Optimization (Principal Level)
+    - [ ] Implement Digest Logic (Aggregator) using Redis
+    - [ ] Implement Throttling/Rate Limiting for External Providers
+- [ ] Worker Development
+    - [ ] Implement Email Worker (Consumer)
+    - [ ] Implement SMS Worker (Consumer)
+    - [ ] Implement Push Worker (Consumer)
+    - [ ] Implement Retry Logic and DLQ handling
+- [ ] Verification and Testing
+    - [ ] Load testing (10,000+ concurrent requests)
+    - [ ] Idempotency verification
+    - [ ] DLQ verification
