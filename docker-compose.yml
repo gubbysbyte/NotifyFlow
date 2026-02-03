@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+# 1. RabbitMQ: The message broker
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: notifyflow_rabbitmq
+    ports: 
+      - "5672:5672" # for our app to connect
+      - "15672:15672" # Management Dashboard UI
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+# 2. PostgreSQL: the persistent storage (logs, status)
+  postgres:
+    image: postgres:15
+    container_name: notifyflow_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: notifyflow
+    volumes:
+      - postgres_data:/var/lib/postgressql/postgres_data
+
+# 3. Redis: The fast cache (idempotency, throttling)
+  redis:
+    image: redis:7-alpine
+    container_name: notifyflow_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  rabbitmq_data:
+  postgres_data:
+  redis_data:
