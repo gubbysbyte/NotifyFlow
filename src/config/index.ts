@@ -17,4 +17,14 @@ export const config = {
     rabbitMQ: {
         url: process.env.RABBITMQ_URL || 'amqp://user:password@localhost:5672',
     },
+    // [NEW] Real Providers
+    email: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+    },
+    sms: {
+        accountSid: process.env.TWILIO_SID,
+        authToken: process.env.TWILIO_TOKEN,
+        fromNumber: process.env.TWILIO_FROM,
+    }
 };

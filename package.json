@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec tsx src/server.ts",
+    "worker": "nodemon --exec tsx src/consumer.ts",
+    "drizzle:studio": "drizzle-kit studio --config drizzle.config.ts",
+    "drizzle:generate": "drizzle-kit generate --config drizzle.config.ts",
+    "drizzle:push": "drizzle-kit push --config drizzle.config.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,16 +18,25 @@
   "packageManager": "pnpm@10.28.2",
   "devDependencies": {
     "@types/amqplib": "^0.10.8",
+    "@types/express": "^5.0.6",
     "@types/node": "^25.2.0",
+    "@types/nodemailer": "^7.0.9",
     "@types/pg": "^8.16.0",
+    "drizzle-kit": "^0.31.8",
+    "drizzle-orm": "^0.45.1",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "amqplib": "^0.10.9",
     "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "nodemailer": "^7.0.13",
     "pg": "^8.18.0",
-    "redis": "^5.10.0"
+    "redis": "^5.10.0",
+    "twilio": "^5.12.0",
+    "zod": "^4.3.6"
   }
 }

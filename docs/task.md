@@ -1,6 +1,6 @@
 # NotifyFlow Project Tasks
 
-- [/] Phase 0: Architecture & Design
+- [x] Phase 0: Architecture & Design
     - [x] Define HLD and Data Flow
     - [x] Create Implementation Plan
 - [x] Phase 1: Foundation Setup
@@ -8,18 +8,18 @@
     - [x] Define Directory Structure
     - [x] Configure Docker Compose for Postgres, Redis, RabbitMQ
     - [x] Verify Services Connection
-- [/] Phase 2: Core Infrastructure Code
+- [x] Phase 2: Core Infrastructure Code
     - [x] Set up PostgreSQL client (pg) & Schema
     - [x] Set up Redis Client
     - [x] Set up RabbitMQ Connection Manager
-- [ ] Phase 3: The Producer API
-    - [ ] Build Basic Express/Fastify Server
-    - [ ] Implement Notification Validation (Zod/Joi)
-    - [ ] Implement RabbitMQ Producer (Push to Queue)
-- [ ] Phase 4: The Consumer Workers
-    - [ ] Build Base Worker Class
-    - [ ] Implement Email Worker (Mock/Real)
-    - [ ] Implement SMS Worker (Mock/Real)
+- [x] Phase 3: The Producer API
+    - [x] Build Basic Express/Fastify Server
+    - [x] Implement Notification Validation (Zod/Joi)
+    - [x] Implement RabbitMQ Producer (Push to Queue)
+- [x] Phase 4: The Consumer Workers
+    - [x] Build Base Worker Class
+    - [x] Implement Email Worker (Mock/Real)
+    - [x] Implement SMS Worker (Mock/Real)
 - [ ] Phase 5: Reliability & Advanced Logic
     - [ ] Implement Idempotency Middleware
     - [ ] Implement Retry Logic & DLQ

@@ -1,0 +1,4 @@
+consumer bhi ban gya and producer bhi ban gyaa
+ab jo karna hai vo hai
+1. testing - Email works, SMS didn't
+2. Drizzle config karna
